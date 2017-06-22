@@ -1,0 +1,11 @@
+.phone {
+    background-position: left center;
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+
+    @include media(w1024) {
+        
+    }
+}

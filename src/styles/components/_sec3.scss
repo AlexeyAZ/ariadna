@@ -1,0 +1,61 @@
+.sec3 {
+    padding: 80px 0;
+
+    @include media(w1024) {
+        padding: 0;
+    }
+
+    &__content {
+        color: white;
+        padding-right: 48%;
+
+        @include media(w1024) {
+            background-color: $main-blue;
+            text-align: center;
+            margin-left: -$container-side-padding-tablet;
+            margin-right: -$container-side-padding-tablet;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            padding-left: $container-side-padding-tablet;
+            padding-right: $container-side-padding-tablet;
+        }
+    }
+    
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        height: 100%;
+    }
+
+    &:before {
+        background-color: $main-blue;
+        left: 0;
+        width: 54%;
+
+        @include media(w1024) {
+            background-color: transparent;
+        }
+    }
+
+    &:after {
+        background-image: url("../img/sec3-img.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        right: 0;
+        width: 46%;
+
+        @include media(w1024) {
+            display: block;
+            position: static;
+            height: 40vw;
+            width: auto;
+        }
+
+        @include media(w768) {
+            min-height: 350px;
+        }
+    }
+}

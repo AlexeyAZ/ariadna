@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Ариадна</title>
+    <link rel="icon" type="image/png" href="favicon.png" sizes="16x16">
+    <link rel="stylesheet" href="styles/vendor.css">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;"></svg>
+    <div class="form-wrap form-wrap_small">
+      <div class="form-container" id="smallFormContainer">
+        <div class="form__close"></div>
+        <p class="form__heading">Оставьте заявку на презентацию франшизы</p>
+        <form class="form" id="smallForm" data-next="#bigForm">
+          <input class="form__input" type="text" name="name" placeholder="Ваше имя" required="">
+          <input class="form__input" type="text" name="phone" placeholder="Ваш телефон" required="">
+          <input class="form__input" type="email" name="email" placeholder="Ваш email" required="">
+          <button class="btn-round form__btn form__btn_size js-big-btn">Скачать</button>
+        </form>
+      </div>
+    </div>
+    <div class="form-wrap form-wrap_big">
+      <div class="form-container" id="bigFormContainer">
+        <div class="form__close"></div>
+        <p class="form__title">Спасибо!</p>
+        <p class="form__descr">В ближайшее время мы обработаем Вашу заявку. Для того, чтобы наш специалист мог максимально подробно ответить на все Ваши вопросы, заполните, пожалуйста, следующую форму. Заранее благодарим</p>
+        <form class="form" method="POST" id="bigForm">
+          <input class="js-hidden-name" type="hidden" name="name1">
+          <input class="js-hidden-phone" type="hidden" name="phone1">
+          <input class="js-hidden-phone" type="hidden" name="email1">
+          <label class="form__label"><span>Введите Ваш город</span>
+            <input class="form__input" type="text" name="city" placeholder="" required="">
+          </label>
+          <label class="form__label"><span>Введите Ваш возраст</span>
+            <input class="form__input" type="text" name="age" placeholder="" required="">
+          </label>
+          <label class="form__label"><span>Наличие бизнеса / Опыт бизнеса</span>
+            <select class="form__select" name="business">
+              <option value="yes">Да</option>
+              <option value="no">Нет</option>
+            </select>
+          </label>
+          <label class="form__label"><span>Объем планируемых инвестиций</span>
+            <select class="form__select" name="volume">
+              <option value="100 000 - 250 000">100 000 — 250 000 рублей</option>
+              <option value="250 000 - 500 000">250 000 — 500 000 рублей</option>
+              <option value="500 000 - 750 000">500 000 — 750 000 рублей</option>
+              <option value="750 000 - 1 000 000">750 000 — 1 000 000 рублей</option>
+              <option value="1 000 000 - 1 500 000">1 000 000 — 1 500 000 рублей</option>
+              <option value="1 500 000 - 3 000 000">1 500 000 — 3 000 000 рублей</option>
+              <option value="3 000 000">Более 3 000 000 рублей</option>
+            </select>
+          </label>
+          <button class="btn-round form__btn form__btn_center">Получить предложение</button>
+        </form>
+      </div>
+    </div>
+    <section class="sec sec1">
+      <header class="header">
+        <div class="container header__container">
+          <div class="header__item header__item_logo"><a class="header__logo" href="/"><img class="header__logo-img" src="img/header-logo.png" alt=""></a></div>
+          <div class="header__item header__item_descr">
+            <p class="s">Франшиза медицинского центра<br> с услугами актуальными для каждого<br> третьего россиянина</p>
+          </div>
+          <div class="header__item header__item_contacts"><a class="header__link phone phone_white" href="tel:89375260820" data-phone="89375260820">8 937 526-08-20</a><a class="header__link link link_getcall js-small-btn" href="">Заказать звонок</a></div>
+        </div>
+      </header>
+      <div class="container color-white">
+        <div class="sec1__content">
+          <div class="sec1__border"></div><img class="sec1__decor sec1__decor_small" src="img/sec1-decor-small.png" alt=""><img class="sec1__decor sec1__decor_big" src="img/sec1-decor-big.png" alt="">
+          <h1>зарабатывайте<br> от 5 млн ₽ в год</h1>
+          <h2 class="mb1">Лечите людей без операций и лекарств <br>по авторской методике восстановления <br>опорно-двигательного аппарата</h2>
+          <button class="btn-round btn-round_download js-small-btn">Скачать презентацию</button>
+        </div>
+      </div><img class="sec1__img" src="img/sec1-img.png" alt="">
+    </section>
+    <section class="sec sec2"><img class="sec2__img" src="img/sec2-img.png" alt="">
+      <div class="container">
+        <div class="sec2__content">
+          <div class="sec2__border">
+            <h2>У каждого третьего жителя планеты есть заболевания позвоночника и суставов</h2>
+          </div>
+          <div class="sec2__list-wrap">
+            <div class="sec2__list">
+              <div class="sec2__list-item"><img class="sec2__list-img" src="img/sec2-icon1.png" alt="">
+                <div class="sec2__decor"></div>
+                <p class="s light mb0">Болезни костно-мышечной системы находятся на третьем месте среди причин нетрудоспособности россиян.</p>
+              </div>
+              <div class="sec2__list-item"><img class="sec2__list-img" src="img/sec2-icon2.png" alt="">
+                <div class="sec2__decor"></div>
+                <p class="s light mb0">Все больше людей отдают предпочтение платным медицинским центрам, которые предлагают сегодня высочайший уровень качества лечения и отношения к клиенту.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec sec3">
+      <div class="container">
+        <div class="sec3__content">
+          <p class="m ff-qanelas">
+            В последние несколько лет большую популярность обрели клиники, основанные на
+            <span class="bold">безоперабельном методе лечения</span>
+          </p>
+          <button class="btn-round btn-round_white js-small-btn">Узнать подробнее</button>
+        </div>
+      </div>
+    </section>
+    <section class="sec sec4">
+      <div class="container">
+        <h2 class="ta-center mb0">«Ариадна» — центр восстановительной травматологии и ортопедии,</h2>
+        <p class="l ff-qanelas ta-center sec4__subtitle">в который съезжаются люди из разных городов и стран</p>
+        <div class="sec4__row">
+          <div class="sec4__col sec4__col_img"><img class="sec4__img" src="img/sec4-img.jpg" alt=""><img class="sec4__decor sec4__decor_blue" src="img/decor-plus-blue.png" alt=""><img class="sec4__decor sec4__decor_green" src="img/decor-plus-green.png" alt=""></div>
+          <div class="sec4__col sec4__col_border">
+            <div class="sec4__border">
+              <p class="mb0 light">Мы помогаем избавляться от артрозов и остеохондрозов, грыж и протрузий дисков, а также мышечной боли с помощью безоперабельных приёмов лечения: миотерапии, остеопатии и висцеральной терапии.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec sec5">
+      <div class="container">
+        <div class="sec5__row">
+          <div class="sec5__col sec5__col_border">
+            <div class="sec5__border">
+              <p class="m light">
+                Благодаря авторской методике лечения мы излечиваем 96,7
+
+                % пациентов — это феноменальная цифра, которой мы гордимся.
+              </p>
+              <button class="btn-round js-small-btn sec5__btn">Скачать презентацию</button>
+            </div>
+          </div>
+          <div class="sec5__col sec5__col_img"><img class="sec5__img" src="img/sec5-img.jpg" alt=""><img class="sec5__decor sec5__decor_blue" src="img/decor-plus-blue.png" alt=""><img class="sec5__decor sec5__decor_green" src="img/decor-plus-green.png" alt=""></div>
+        </div>
+      </div>
+    </section>
+    <section class="sec sec6">
+      <div class="container">
+        <div class="sec6__row">
+          <div class="sec6__col">
+            <div class="sec6__img-wrap"><img class="sec6__img" src="img/sec6-img.jpg" alt=""><img class="sec6__decor sec6__decor_blue" src="img/decor-plus-blue.png" alt=""><img class="sec6__decor sec6__decor_green" src="img/decor-plus-green.png" alt=""></div>
+          </div>
+          <div class="sec6__col">
+            <div class="sec6__border">
+              <p class="m light mb0">За 10 лет мы вылечили более 30 000 человек из России, Казахстана, Германии, Нидерландов, Кипра, Болгарии и Чили. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec sec7">
+      <div class="container">
+        <div class="sec7__text">
+          <p class="l semibold ff-qanelas">Годовой оборот нашего центра достиг 40 млн рублей </p>
+          <p class="m ff-qanelas mb1">И в 2017–2018 гг. мы планируем открыть по франшизе еще 6 центров</p>
+          <button class="btn-round btn-round_white js-small-btn">Скачать презентацию</button>
+        </div>
+      </div><img class="sec7__map" src="img/sec7-map.png" alt="">
+    </section>
+    <section class="sec sec8">
+      <div class="container">
+        <div class="sec8__content">
+          <div class="sec8__border">
+            <h2 class="mb0">
+              Станьте владельцем бизнеса, который приносит ощутимую пользу людям и от
+              <span class="bold">590 000 рублей</span>
+              прибыли ежемесячно
+            </h2>
+          </div>
+          <p class="m light mb1 sec8__subtitle">В качестве партнёров мы рассматриваем как специалистов с опытом в медицине, так и предпринимателей без опыта в этой сфере. Мы предоставим вам всё необходимое для открытия:</p>
+          <div class="sec8__list">
+            <div class="sec8__list-item">
+              <div class="sec8__list-circle"><img class="sec8__list-img" src="img/sec8-icon1.png" alt=""></div>
+              <p class="m light mb0 sec8__list-text">1. Права на использование бренда «Ариадна»</p>
+            </div>
+            <div class="sec8__list-item">
+              <div class="sec8__list-circle"><img class="sec8__list-img" src="img/sec8-icon2.png" alt=""></div>
+              <p class="m light mb0 sec8__list-text">2. Бизнес-план по открытию медицинского</p>
+            </div>
+            <div class="sec8__list-item">
+              <div class="sec8__list-circle"><img class="sec8__list-img" src="img/sec8-icon3.png" alt=""></div>
+              <p class="m light mb0 sec8__list-text">3. Авторскую методику лечения</p>
+            </div>
+            <div class="sec8__list-item">
+              <div class="sec8__list-circle"><img class="sec8__list-img" src="img/sec8-icon4.png" alt=""></div>
+              <p class="m light mb0 sec8__list-text">4. Рекламные материалы, видеоролики, тексты и графику</p>
+            </div>
+            <div class="sec8__list-item">
+              <div class="sec8__list-circle"><img class="sec8__list-img" src="img/sec8-icon5.png" alt=""></div>
+              <p class="m light mb0 sec8__list-text">5. Помощь в подборе помещения и специалистов</p>
+            </div>
+            <div class="sec8__list-item">
+              <div class="sec8__list-circle"><img class="sec8__list-img" src="img/sec8-icon6.png" alt=""></div>
+              <p class="m light mb0 sec8__list-text">6. Помощь в получении лицензии</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec sec9">
+      <div class="container ta-center">
+        <p class="m sec9__subtitle">Вы будете знать, что нужно делать<br> на каждом этапе при запуска бизнеса</p>
+        <div class="sec9__border"><img class="sec9__decor sec9__decor_blue" src="img/decor-plus-blue.png" alt=""><img class="sec9__decor sec9__decor_green" src="img/decor-plus-green.png" alt="">
+          <p class="l semibold ff-qanelas">Наша поддержка и репутация — ценный ресурс, который обеспечит вас клиентами с первого дня работы</p>
+        </div>
+      </div>
+      <div class="sec9__bottom"><img class="sec9__img" src="img/sec10-img.jpg" alt="">
+        <div class="container sec9__container">
+          <div class="sec9__content">
+            <h2 class="bold mb0 sec9__title">Для старта вам потребуется<br> от 950 000 рублей, </h2>
+            <p class="l medium ff-qanelas sec9__bottom-subtitle">на приобретение франшизы</p>
+            <p class="m light sec9__text">А также <span class="medium">598 000 рублей<br></span>
+              на инвестиции в помещение,<br class="br-tablet"> оборудование и рекламу
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec sec10">
+      <div class="container ta-center color-white">
+        <h2 class="semibold mb1">Вы откроетесь через 60 дней,<br> и окупите все вложения уже на 9й месяц работы!</h2>
+        <button class="btn-round btn-round_white js-small-btn sec10__btn">Скачать таблицу затрат и доходов</button>
+      </div>
+    </section>
+    <section class="sec sec11">
+      <div class="container color-white">
+        <div class="sec11__content">
+          <div class="sec11__border">
+            <p class="l semibold ff-qanelas">Сделайте шаг к открытию медицинского центра,</p>
+            <p class="m">клиентами которого станут бизнесмены, политики и любой житель вашего города, независимо от возраста и уровня доходов</p>
+          </div>
+          <div class="bottom-form-container" id="bottomFormContainer">
+            <p class="m light bottom-form__title">Проверьте, свободен ли ваш город?</p>
+            <form class="bottom-form" data-next="#bigForm" id="bottomForm">
+              <label class="bottom-form__label">
+                <input class="input input_city bottom-form__input" type="text" name="city" placeholder="Ваш город" required>
+              </label>
+              <label class="bottom-form__label">
+                <input class="input input_phone bottom-form__input" type="text" name="phone" placeholder="Телефон" required>
+              </label>
+              <label class="bottom-form__label">
+                <input class="input input_email bottom-form__input" type="email" name="email" placeholder="E-mail" required>
+              </label>
+              <button class="btn-round bottom-form__btn">Проверить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__block footer__block_social">
+          <p class="footer__text footer__text_copy">© 2017, «Уномоменто»</p>
+          <div class="footer__social">
+            <p class="footer__text footer__text_social-title">Мы в соц. сетях</p>
+            <ul class="footer__social-list">
+              <li class="footer__social-item"><a class="footer__link footer__link_social" href="" target="_blank"><i class="fa fa-vk"></i></a></li>
+              <li class="footer__social-item"><a class="footer__link footer__link_social" href="" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li class="footer__social-item"><a class="footer__link footer__link_social" href="" target="_blank"><i class="fa fa-tripadvisor"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__block footer__block_contacts">
+          <p class="footer__text footer__text_adress">Наш офис: Пермь, ул. Шоссе Космонавтов, 111, корпус 2</p>
+          <div class="footer__contacts"><a class="footer__text footer__link footer__link_politic" href="doc/politic.pdf" target="_blank">Политика конфиденциальности</a>
+            <p class="footer__text">e-mail:<a class="footer__link" href="mailto:uno@uno-perm.ru">uno@uno-perm.ru</a></p>
+          </div>
+        </div>
+        <div class="footer__block footer__block_feedback"><a class="footer__phone" href="tel:89375260820" data-phone="89375260820">8 937 526-08-20</a><a class="footer__link footer__link_getcall js-small-btn">Заказать звонок</a></div>
+      </div>
+    </footer>
+    <script src="scripts/vendor.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>

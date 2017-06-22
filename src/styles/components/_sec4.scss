@@ -1,0 +1,119 @@
+.sec4 {
+    padding: 80px 0 140px;
+
+    @include media(w1024) {
+        padding: 60px 0 80px;
+    }
+
+    @include media(w768) {
+        padding: 30px 0 50px;
+    }
+
+    &__subtitle {
+        margin-bottom: 150px;
+
+        @include media(w1024) {
+            margin-bottom: 100px;
+        }
+
+        @include media(w768) {
+            margin-bottom: 70px;
+        }
+    }
+    
+    &__row {
+        display: flex;
+        align-items: flex-start;
+
+        @include media(w1024) {
+            display: block;
+        }
+    }
+
+    &__col {
+        position: relative;
+        width: 50%;
+
+        &_border {
+            padding-top: 240px;
+
+            @include media(w1024) {
+                padding-top: 0;
+            }
+        }
+
+        &_img {
+
+            @include media(w1024) {
+                margin: 0 auto 110px;
+                max-width: 600px;
+                width: 90%;
+            }
+
+            @include media(w768) {
+                margin-left: -$container-side-padding-tablet;
+                margin-right: -$container-side-padding-tablet;
+                max-width: none;
+            }
+        }
+
+        @include media(w1024) {
+            width: auto;
+        }
+    }
+
+    &__decor {
+        position: absolute;
+        z-index: 2;
+
+        &_green {
+            transform: translate(-20%, -25%);
+            top: 100%;
+            left: 0;
+
+            @include media(w768) {
+                transform: translate(20%, -25%);
+                max-height: 110px;
+            }
+        }
+
+        &_blue {
+            transform: translateY(40%);
+            bottom: 100%;
+            right: 20px;
+
+            @include media(w768) {
+                max-height: 90px;
+            }
+        }
+    }
+
+    &__img {
+        display: block;
+        position: relative;
+        z-index: 1;
+        width: 100%;
+    }
+
+    &__border {
+        border: $border-width-pc solid $main-green;
+        margin-left: -140px;
+        margin-right: -70px;
+        padding: 90px 70px 140px 180px;
+
+        @include media(w1366) {
+            margin-right: 0;
+        }
+
+        @include media(w1024) {
+            text-align: center;
+            margin-left: 0;
+            padding: 30px 20px;
+        }
+
+        @include media(w768) {
+            border-width: $border-width-mobile;
+            padding: 20px 10px;
+        }
+    }
+}

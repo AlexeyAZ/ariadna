@@ -1,0 +1,164 @@
+.sec9 {
+    background-image: url("../img/sec9-bg.jpg");
+    overflow: hidden;
+    padding: 80px 0 0;
+
+    @include media(w1024) {
+        padding-top: 60px;
+    }
+
+    @include media(w768) {
+        padding-top: 30px;
+    }
+
+    &__subtitle {
+        margin-bottom: 2em;
+
+        @include media(w1024) {
+            margin-bottom: 3em;
+        }
+    }
+
+    &__decor {
+        position: absolute;
+
+        &_blue {
+            transform: translateY(-120%);
+            top: 0;
+            left: 100%;
+
+            @include media(w1024) {
+                transform: translateY(-90%);
+                left: auto;
+                right: 20px;
+                max-height: 90px;
+            }
+        }
+
+        &_green {
+            transform: translateX(35%);
+            right: 100%;
+            bottom: 0;
+
+            @include media(w1024) {
+                transform: translate(0, -20px);
+                right: auto;
+                left: 0;
+                top: 100%;
+                bottom: auto;
+                max-height: 100px;
+            }
+        }
+    }
+
+    &__title {
+
+        @include media(w1024) {
+            padding-left: 45%;
+        }
+
+        @include media(w768) {
+            text-align: center;
+            padding-left: 0;
+        }
+    }
+
+    &__bottom-subtitle {
+
+        @include media(w1024) {
+            padding-left: 45%;
+        }
+
+        @include media(w768) {
+            text-align: center;
+            padding-left: 0;
+        }
+    }
+
+    &__text {
+
+        @include media(w1024) {
+            text-align: center;
+        }
+    }
+    
+    &__border {
+        border: $border-width-pc solid $main-green;
+        margin: 0 auto;
+        padding: 60px 40px 100px;
+        position: relative;
+        max-width: 85%;
+        z-index: 2;
+
+        @include media(w1024) {
+            margin-bottom: 100px;
+            max-width: none;
+        }
+
+        @include media(w768) {
+            border: $border-width-mobile solid $main-green;
+            padding: 40px;
+        }
+    }
+
+    &__bottom {
+        background-color: white;
+        margin-top: -40px;
+        padding-top: 140px;
+        padding-bottom: 60px;
+        position: relative;
+        z-index: 1;
+
+        @include media(w1024) {
+            margin-top: 0;
+            padding-top: 100px;
+        }
+
+        @include media(w768) {
+            padding-top: 30px;
+            padding-bottom: 30px;
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    
+    &__content {
+        padding-left: 30%;
+
+        @include media(w1024) {
+            padding-left: 0;
+            padding-bottom: 70px;
+        }
+
+        @include media(w768) {
+            padding-bottom: 30px;
+        }
+    }
+
+    &__img {
+        transform: translateY(-40%);
+        position: absolute;
+        top: 50%;
+        right: 70%;
+        z-index: -1;
+
+        @include media(w1024) {
+            transform: translateY(0);
+            top: -60px;
+            right: 60%;
+            max-height: 30vh;
+        }
+
+        @include media(w768) {
+            display: block;
+            margin: 0 auto;
+            position: static;
+            max-height: none;
+            max-width: 400px;
+            width: 90%;
+        }
+    }
+}

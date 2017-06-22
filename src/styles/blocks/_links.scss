@@ -1,0 +1,13 @@
+a {
+    display: inline-block;
+    transition: $trans;
+}
+
+.link {
+    text-decoration: none;
+
+    &_getcall {
+        border-bottom: 2px dotted currentColor;
+        font-size: 16px;
+    }
+}

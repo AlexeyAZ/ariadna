@@ -1,0 +1,121 @@
+button {
+    white-space: nowrap;
+
+    &.btn-round {
+        border: none;
+        outline: none;
+    }
+}
+
+a {
+
+    &.btn-round {
+        display: inline-flex;
+        align-items: center;
+    }
+}
+
+.btn-round {
+    transition: $trans;
+    background-color: $btn-main-bg;
+    border-radius: $btn-height-pc / 2;
+    border-radius: calc(#{$btn-height-pc} / 2);
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    font-size: $btn-font-size-pc;
+    text-align: center;
+    text-decoration: none;
+    padding: 0 45px;
+    height: $btn-height-pc;
+
+    @include media (w1024) {
+        border-radius: $btn-height-tablet / 2;
+        border-radius: calc(#{$btn-height-tablet} / 2);
+        font-size: $btn-font-size-tablet;
+        height: $btn-height-tablet;
+    }
+
+    @include media (w768) {
+        border-radius: $btn-height-mobile / 2;
+        border-radius: calc(#{$btn-height-mobile} / 2);
+        font-size: $btn-font-size-mobile;
+        padding: 0 10px;
+        height: $btn-height-mobile;
+        width: 100%;
+    }
+
+    &:hover {
+        background-color: white;
+        color: $main-green;
+    }
+
+    &_download {
+        margin-bottom: 2em;
+        position: relative;
+
+        &:after {
+            content: "PDF, 20Mb";
+            font-family: "PFSquareSansPro", Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            font-weight: 300;
+            position: absolute;
+            top: calc(100% + 20px);
+            left: 30px;
+            white-space: nowrap;
+
+            @include media (w1024) {
+            }
+
+            @include media (w768) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &_download-column {
+        margin-bottom: 50px;
+
+        &:after {
+            transform: translateX(-50%);
+            position: absolute;
+            left: 50%;
+            top: calc(100% + 10px);
+        }
+    }
+
+    &_clear {
+        
+        &:after {
+            content: none;
+        }
+    }
+
+    &_white {
+        background-color: white;
+        color: black;
+
+        &:hover {
+            background-color: black;
+            color: white;
+        }
+    }
+}
+
+@keyframes btnAnimRed {
+    from {
+        box-shadow: 0 0 8px 6px $btn-main-bg, 0 0 12px 14px $btn-main-bg;
+    }
+    to {
+        box-shadow: 0 0 18px 6px rgba(255, 48, 26, 0), 0 0 4px 71px rgba(255, 48, 26, 0);
+    }
+}
+
+@keyframes btnAnimWhite {
+    from {
+        box-shadow: 0 0 8px 6px white, 0 0 12px 14px white;
+    }
+    to {
+        box-shadow: 0 0 18px 6px rgba(255, 48, 26, 0), 0 0 4px 71px rgba(255, 48, 26, 0);
+    }
+}

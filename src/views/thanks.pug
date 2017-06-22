@@ -1,0 +1,20 @@
+extends templates/layout
+
+block vars
+    - var title = 'Ариадна'
+
+block content
+    section.sec.thanks
+        include components/header
+        div.container
+            p.thanks__heading.
+                <span id="thanksName"></span> менеджеры уже занимаются вашей заявкой
+            p.thanks__title.
+                Мы свяжемся с Вами в ближайшее время
+            div.thanks__buttons
+                a(href="doc/mk.pdf" target="_blank").btn-round.btn-round_download.
+                    Открыть презентацию
+                a(href="/index.html").thanks__links-link.
+                    Вернуться на сайт
+            p.thanks__subtitle.
+                График работы с 9.00 до 23.00 Поэтому, если вы оставили заявку в нерабочее время, мы перезвоним вам на следующий рабочий день

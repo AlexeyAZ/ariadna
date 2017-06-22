@@ -1,0 +1,17 @@
+- var sec2List = ["Болезни костно-мышечной системы находятся на третьем месте среди причин нетрудоспособности россиян.", "Все больше людей отдают предпочтение платным медицинским центрам, которые предлагают сегодня высочайший уровень качества лечения и отношения к клиенту."]
+
+section.sec.sec2
+    img(src="img/sec2-img.png", alt="").sec2__img
+    div.container
+        div.sec2__content
+            div.sec2__border
+                h2.
+                    У каждого третьего жителя планеты есть заболевания позвоночника и суставов
+            div.sec2__list-wrap
+                div.sec2__list
+                    each item, index in sec2List
+                        div.sec2__list-item
+                            img(src="img/sec2-icon" + (index + 1) + ".png", alt="").sec2__list-img
+                            div.sec2__decor
+                            p.s.light.mb0.
+                                #{item}

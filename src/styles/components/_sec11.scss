@@ -1,0 +1,54 @@
+.sec11 {
+    background-image: url("../img/sec11-bg.jpg");
+    overflow: hidden;
+
+    &__content {
+        padding: 60px 0 100px 43%;
+        position: relative;
+        z-index: 1;
+
+        &:after {
+            content: "";
+            background-color: $main-blue;
+            opacity: 0.8;
+            position: absolute;
+            top: 0;
+            left: 35%;
+            height: 100%;
+            width: 100vw;
+            z-index: -1;
+
+            @include media(w1024) {
+                left: 25%;
+            }
+
+            @include media(w768) {
+                left: -$container-side-padding-tablet;
+                width: calc(100% + 2 * #{$container-side-padding-tablet});
+            }
+        }
+
+        @include media(w1024) {
+            padding: 50px 30px 80px 33%;
+        }
+
+        @include media(w768) {
+            text-align: center;
+            padding: 30px 0;
+        }
+    }
+
+    &__border {
+        border: $border-width-pc solid white;
+        margin-right: -80px;
+        margin-left: -140px;
+        margin-bottom: 30px;
+        padding: 60px 80px 60px 140px;
+
+        @include media(w768) {
+            margin-left: -$container-side-padding-tablet;
+            margin-right: -$container-side-padding-tablet;
+            padding: 30px 20px;
+        }
+    }
+}

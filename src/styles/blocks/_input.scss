@@ -1,0 +1,101 @@
+.input {
+    @include placeholder {
+        color: white;
+    }
+    background-color: rgba(0,0,0,0.6);
+    background-repeat: no-repeat;
+    border-radius: calc(#{$btn-height-pc} / 2);
+    border: 2px solid white;
+    outline: none;
+    display: inline-block;
+    color: white;
+    font-family: "SegoeUI", sans-serif;
+    font-weight: 300;
+    font-size: $input-font-size-pc;
+    padding: 0 35px;
+    height: $btn-height-pc;
+    width: 100%;
+
+    @include media (w1024) {
+        border-radius: calc(#{$btn-height-tablet} / 2);
+        padding: 0 25px;
+        font-size: $input-font-size-tablet;
+        height: $btn-height-tablet;
+    }
+
+    @include media (w768) {
+        border-radius: calc(#{$btn-height-mobile} / 2);
+        font-size: $input-font-size-mobile;
+        padding: 0 20px;
+        height: $btn-height-mobile;
+    }
+
+    &_city {
+        background-image: url("../img/icon-pin.png");
+        background-position: 40px center;
+        background-size: auto 50px;
+        padding-left: 100px;
+
+        @include media(w768) {
+            background-position: 20px center;
+            background-size: auto 40px;
+            padding-left: 60px;
+        }
+    }
+
+    &_phone {
+        background-image: url("../img/icon-phone.png");
+        background-position: 30px center;
+        background-size: auto 45px;
+        padding-left: 100px;
+
+        @include media(w768) {
+            background-position: 20px center;
+            background-size: auto 30px;
+            padding-left: 60px;
+        }
+    }
+
+    &_email {
+        background-image: url("../img/icon-mail.png");
+        background-position: 30px center;
+        background-size: auto 50px;
+        padding-left: 100px;
+
+        @include media(w768) {
+            background-position: 20px center;
+            background-size: auto 30px;
+            padding-left: 60px;
+        }
+    }
+}
+
+.select {
+    background-color: white;
+    background-repeat: no-repeat;
+    border-radius: $btn-height-pc / 2;
+    border-radius: calc(#{$btn-height-pc} / 2);
+    border: 2px solid #d7d7d7;
+    outline: none;
+    display: inline-block;
+    color: #6b6b6b;
+    font-family: "PFHandBookPro", sans-serif;
+    font-size: $input-font-size-pc;
+    padding: 0 35px;
+    height: $btn-height-pc;
+
+    @include media (w1024) {
+        border-radius: $btn-height-tablet / 2;
+        border-radius: calc(#{$btn-height-tablet} / 2);
+        font-size: $input-font-size-tablet;
+        height: $btn-height-tablet;
+    }
+
+    @include media (w768) {
+        border-radius: $btn-height-mobile / 2;
+        border-radius: calc(#{$btn-height-mobile} / 2);
+        font-size: $input-font-size-mobile;
+        padding: 0 20px;
+        height: $btn-height-mobile;
+    }
+}

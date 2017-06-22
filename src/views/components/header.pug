@@ -1,0 +1,13 @@
+header.header
+    div.container.header__container
+        div.header__item.header__item_logo
+            a(href="/").header__logo
+                img(src="img/header-logo.png", alt="").header__logo-img
+        div.header__item.header__item_descr
+            p.s.
+                Франшиза медицинского центра<br> с услугами актуальными для каждого<br> третьего россиянина
+        div.header__item.header__item_contacts
+            a(href="tel:" + attrPhone)&attributes({'data-phone': attrPhone}).header__link.phone.phone_white.
+                #{phone}
+            a(href="").header__link.link.link_getcall.js-small-btn.
+                Заказать звонок

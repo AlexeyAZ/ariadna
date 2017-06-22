@@ -1,0 +1,110 @@
+.sec6 {
+    padding: 160px 0 190px;
+
+    @include media(w1024) {
+        padding: 120px 0 60px;
+    }
+
+    @include media(w768) {
+        padding: 100px 0 60px;
+    }
+
+    &__row {
+        display: flex;
+
+        @include media(w1024) {
+            display: block;
+        }
+    }
+
+    &__col {
+        width: 50%;
+
+        @include media(w1024) {
+            width: auto;
+        }
+    }
+
+    &__img-wrap {
+        position: relative;
+        z-index: 1;
+
+        @include media(w1024) {
+            margin: 0 auto 110px;
+            max-width: 600px;
+            width: 90%;
+        }
+
+        @include media(w768) {
+            margin-left: -$container-side-padding-tablet;
+            margin-right: -$container-side-padding-tablet;
+            max-width: none;
+            width: auto;
+        }
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+    }
+
+    &__decor {
+        position: absolute;
+
+        &_blue {
+            transform: translate(0, 40%);
+            right: 20px;
+            bottom: 100%;
+
+            @include media(w768) {
+                transform: translate(0, 20%);
+                max-height: 90px;
+            }
+        }
+
+        &_green {
+            transform: translate(52%, -50%);
+            right: 100%;
+            top: 100%;
+
+            @include media(w1366) {
+                transform: translate(-5%, -20%);
+                right: auto;
+                left: 0;
+            }
+
+            @include media(w768) {
+                transform: translate(10%, -20%);
+                max-height: 110px;
+            }
+        }
+    }
+
+    &__border {
+        transform: translateY(-50%);
+        border: $border-width-pc solid $main-green;
+        margin-top: 50%;
+        margin-left: -50px;
+        margin-right: -80px;
+        padding: 110px 80px 110px 100px;
+
+        @include media(w1366) {
+            margin-right: 0;
+            padding: 110px 40px 110px 100px;
+        }
+
+        @include media(w1024) {
+            transform: translateY(0);
+            text-align: center;
+            margin-top: 210px;
+            margin-left: 0;
+            padding: 30px 20px;
+        }
+
+        @include media(w768) {
+            border-width: $border-width-mobile;
+            margin-top: 110px;
+            padding: 20px 10px;
+        }
+    }
+}

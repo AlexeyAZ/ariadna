@@ -1,0 +1,55 @@
+h1, h2, h3, h4, h5, h6, p {
+    margin-bottom: 0.5em;
+}
+
+.s {
+    font-size: 25px;
+}
+
+.m {
+    font-size: 33px;
+
+    @include media(w768) {
+        font-size: 25px;
+    }
+}
+
+.l {
+    font-size: 41px;
+
+    @include media(w1024) {
+        font-size: 33px;
+    }
+
+    @include media(w768) {
+        font-size: 25px;
+    }
+}
+
+h2 {
+    font-size: 41px;
+    font-family: "Qanelas", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+
+    @include media(w1024) {
+        font-size: 33px;
+    }
+
+    @include media(w768) {
+        font-size: 25px;
+    }
+}
+
+h1 {
+    font-family: 'Days', Arial, Helvetica, sans-serif;
+    font-size: 66px;
+    text-transform: uppercase;
+
+    @include media(w1024) {
+        font-size: 45px;
+    }
+
+    @include media(w768) {
+        font-size: 25px;
+    }
+}

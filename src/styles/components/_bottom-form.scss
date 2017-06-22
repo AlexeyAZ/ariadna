@@ -1,0 +1,35 @@
+.bottom-form-container {
+
+}
+.bottom-form {
+    //display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__label {
+        display: block;
+        margin-bottom: 20px;
+
+    }
+
+    &__title {
+        margin-bottom: 2em;
+
+        @include media (w768) {
+            margin-bottom: 1em;
+        }
+    }
+
+    &__btn {
+
+   
+    }
+
+    &__input {
+        @include placeholder {
+            color: black;
+        }
+        background-color: white;
+        color: black;
+    }
+}

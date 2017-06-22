@@ -1,0 +1,22 @@
+.sec10 {
+    background-color: $main-blue;
+    padding: 60px 0;
+
+    @include media(w768) {
+        padding: 30px 0;
+    }
+
+    &__btn {
+
+        @include media(w768) {
+            font-size: 16px;
+        }
+    }
+
+    br {
+
+        @include media(w768) {
+            display: none;
+        }
+    }
+}

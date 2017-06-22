@@ -1,0 +1,51 @@
+.ff-qanelas {
+    font-family: "Qanelas", Arial, Helvetica, sans-serif;
+}
+
+.ta-center {
+    text-align: center;
+}
+
+.tt-uppercase {
+    text-transform: uppercase;
+}
+
+.color-white {
+    color: white;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.semibold {
+    font-weight: 700;
+}
+
+.medium {
+    font-weight: 500;
+}
+
+.light {
+    font-weight: 300;
+}
+
+.mb0 {
+    margin-bottom: 0;
+}
+
+.mb1 {
+    margin-bottom: 1em;
+}
+
+.mb2 {
+    margin-bottom: 2em;
+}
+
+.br-tablet {
+    display: none;
+
+    @include media(w1024) {
+        display: inline;
+    }
+}
