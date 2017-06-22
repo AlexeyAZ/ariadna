@@ -1,11 +1,25 @@
 footer.footer
     div.container.footer__container
-        div.footer__block.footer__block_social
+        div.footer__block.footer__block_copy
             p.footer__text.footer__text_copy.
-                © 2017, «Уномоменто»
+                © Ариадна, 2017<br> медицинский центр
+        div.footer__block.footer__block_politic
+            a(href="doc/politic.pdf" target="_blank").footer__text.footer__link.footer__link_politic.
+                Политика<br> конфиденциальности
+        //div.footer__block.footer__block_contacts
+            p.footer__text.footer__text_adress.
+                Наш офис: Пермь, ул. Шоссе Космонавтов, 111, корпус 2
+            div.footer__contacts
+                a(href="doc/politic.pdf" target="_blank").footer__text.footer__link.footer__link_politic.
+                    Политика конфиденциальности
+                p.footer__text
+                    |e-mail:
+                    a(href="mailto:uno@uno-perm.ru").footer__link.
+                        uno@uno-perm.ru
+        div.footer__block.footer__block_social
             div.footer__social
                 p.footer__text.footer__text_social-title.
-                    Мы в соц. сетях
+                    Мы в социальных сетях
                 ul.footer__social-list
                     li.footer__social-item
                         a(href="" target="_blank").footer__link.footer__link_social
@@ -16,16 +30,6 @@ footer.footer
                     li.footer__social-item
                         a(href="" target="_blank").footer__link.footer__link_social
                             i.fa.fa-tripadvisor
-        div.footer__block.footer__block_contacts
-            p.footer__text.footer__text_adress.
-                Наш офис: Пермь, ул. Шоссе Космонавтов, 111, корпус 2
-            div.footer__contacts
-                a(href="doc/politic.pdf" target="_blank").footer__text.footer__link.footer__link_politic.
-                    Политика конфиденциальности
-                p.footer__text
-                    |e-mail:
-                    a(href="mailto:uno@uno-perm.ru").footer__link.
-                        uno@uno-perm.ru
         div.footer__block.footer__block_feedback
             a(href="tel:" + attrPhone)&attributes({'data-phone': attrPhone}).footer__phone.
                 #{phone}
