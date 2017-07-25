@@ -1,11 +1,13 @@
 <?php
-$sendto = "alex_z@mail.franch5.ru, zayavg2017@yandex.ru, franchaizing-5@yandex.ru";
+$sendto = "alex_z@mail.franch5.ru, zayavg2017@yandex.ru, franchaizing-5@yandex.ru, franchise@ariadna45.ru";
 $phone = nl2br($_POST['phone']);
 $name = nl2br($_POST['name']);
 $email = nl2br($_POST['email']);
 $city = nl2br($_POST['city']);
+$title = nl2br($_POST['title']);
 
 $content = "Заявка с сайта ";
+$content .= $title;
 
 // Формирование заголовка письма
 $subject  = $content;
@@ -16,7 +18,9 @@ $headers .= "Content-Type: text/html;charset=utf-8 \r\n";
 
 // Формирование тела письма
 $msg  = "<html><body style='font-family:Arial,sans-serif;'5>";
-$msg .= "<h2 style='font-weight:bold;border-bottom:1px dotted #ccc;'>Письмо с сайта </h2>\r\n";
+$msg .= "<h2 style='font-weight:bold;border-bottom:1px dotted #ccc;'>Письмо с сайта ";
+$msg .= $title;
+$msg .= "</h2>\r\n";
 $msg .= "<p><strong>Телефон:</strong> ".$phone."</p>\r\n";
 $msg .= "<p><strong>ФИО:</strong> ".$name."</p>\r\n";
 $msg .= "<p><strong>E-mail:</strong> ".$email."</p>\r\n";
@@ -65,7 +69,7 @@ $wemsg = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http:/
 </html>';
 
 mail($sendto, $subject, $msg, $headers);
-mail($email, $subject, $wemsg, $headers);
+//mail($email, $subject, $wemsg, $headers);
 
 ?>
 

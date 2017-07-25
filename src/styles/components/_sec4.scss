@@ -7,6 +7,10 @@
 
     @include media(w768) {
         padding: 30px 0 50px;
+
+        br {
+            display: none;
+        }
     }
 
     &__subtitle {
@@ -99,7 +103,7 @@
         border: $border-width-pc solid $main-green;
         margin-left: -140px;
         margin-right: -70px;
-        padding: 90px 70px 140px 180px;
+        padding: 90px 50px 100px 180px;
 
         @include media(w1366) {
             margin-right: 0;

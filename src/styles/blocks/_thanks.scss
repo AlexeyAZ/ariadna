@@ -1,24 +1,43 @@
 .thanks {
     background-image: url("../img/sec1-bg.jpg");
+    overflow: hidden;
     padding-top: 30px;
-    padding-bottom: 160px;
 
-    @include media(w1024) {
-        padding-bottom: 200px;
-    }
-
-    &__heading {
-        border-bottom: 2px solid white;
-        font-weight: 800;
-        font-size: 75px;
-        padding-bottom: 0.4em;
+    &__content {
+        margin-bottom: 3em;
 
         @include media(w1024) {
-            font-size: 50px;
+            border: $border-width-mobile solid $main-green;
+            text-align: center;
+            max-width: none;
+            width: 100%;
         }
 
         @include media(w768) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    &__border {
+
+        @include media(w1024) {
+            display: none;
+        }
+    }
+
+    &__heading {
+        font-family: "Days", Arial, Helvetica, sans-serif;
+        font-size: 58px;
+        text-transform: uppercase;
+        padding-bottom: 0.2em;
+
+        @include media(w1024) {
             font-size: 40px;
+        }
+
+        @include media(w768) {
+            font-size: 22px;
         }
     }
 
@@ -36,11 +55,14 @@
     }
 
     &__subtitle {
-        font-size: 38px;
+        font-size: 35px;
         margin-bottom: 1em;
+        max-width: 60%;
 
         @include media(w1024) {
             font-size: 30px;
+            max-width: none;
+            text-align: center;
         }
 
         @include media(w768) {
@@ -50,10 +72,14 @@
 
     &__buttons {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 30px;
-        width: 100%;
+        flex-flow: column;
+        align-items: flex-start;
+        margin: 0 auto 20px;
+        font-size: 25px;
+
+        @include media(w1024) {
+            align-items: center;
+        }
 
         @include media(w768) {
             flex-direction: column;
@@ -62,17 +88,27 @@
 
     &__buttons-link {
         color: white;
-        font-size: 30px;
-        margin-left: 60px;
 
-        @include media(w768) {
-            font-size: 20px;
-            margin-left: 0;
-            margin-top: 20px;
+        &:hover {
+            text-decoration: none;
         }
+    }
+
+    &__buttons-btn {
+        justify-content: center;
     }
 
     &__btn {
         justify-content: center;
+    }
+
+    &__img {
+        position: absolute;
+        bottom: 0;
+        left: 60%;
+
+        @include media(w1024) {
+            display: none;
+        }
     }
 }

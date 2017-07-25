@@ -44,15 +44,27 @@
     }
 
     &_phone {
-        background-image: url("../img/icon-phone.png");
-        background-position: 30px center;
-        background-size: auto 45px;
+        background-image: url("../img/icon-phone.png"), url("../img/galka.svg");
+        background-position: 30px center, right 20px center;
+        background-size: auto 45px, 0;
+        background-repeat: no-repeat;
         padding-left: 100px;
 
+        @include media (w1280) {
+            background-position: 30px center, right 10px center;
+        }
+
         @include media(w768) {
-            background-position: 20px center;
-            background-size: auto 30px;
+            background-position: 20px center, right 20px center;
             padding-left: 60px;
+        }
+    }
+
+    &_success {
+        background-size: auto 45px, 20px !important;
+
+        @include media (w768) {
+            background-size: auto 30px, 20px !important;
         }
     }
 

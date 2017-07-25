@@ -2,7 +2,7 @@
 $sendto = nl2br($_POST['email']);
 $sendname = nl2br($_POST['name']);
 
-$content = "Заявка с сайта ";
+$content = "Заявка с сайта Ариадна";
 // Формирование заголовка письма
 $subject  = $content;
 $headers  = "From: no-reply@no-reply.ru" . "\r\n";

@@ -8,10 +8,13 @@ $(function () {
     var name;
 
     function moveEl(elClass, containerClass) {
-        var el = document.querySelector(elClass);
-        var container = document.querySelector(containerClass);
 
-        container.appendChild(el);
+        if (document.querySelector(elClass)) {
+            var el = document.querySelector(elClass);
+            var container = document.querySelector(containerClass);
+
+            container.appendChild(el);
+        }
     }
 
     function sec2MoveImg() {
@@ -84,9 +87,20 @@ $(function () {
     // form handler
 
     $("input[name=phone]").inputmask({
-        "mask": "+9(999)999-9999",
+        "mask": "+9 999 999-9999",
         greedy: false,
-        clearIncomplete: true
+        clearIncomplete: true,
+        "oncomplete": function () {
+            $(this).addClass("input_success");
+        },
+        onKeyDown: function (event, buffer, caretPos, opts) {
+
+            if (buffer[buffer.length - 1] === "_") {
+                $(this).removeClass("input_success");
+            } else {
+                $(this).addClass("input_success");
+            }
+        }
     });
 
     body.on("click", ".js-small-btn", function (e) {
@@ -151,9 +165,10 @@ $(function () {
                 smallFormWrap.classList.add("form-wrap_open");
             },
 
-            openBigForm: function () {
+            openBigForm: function (callback) {
                 document.documentElement.classList.add("form-open");
                 bigFormWrap.classList.add("form-wrap_open");
+                callback();
             },
 
             closeSmallForm: function () {
@@ -164,40 +179,81 @@ $(function () {
             closeBigForm: function () {
                 document.documentElement.classList.remove("form-open");
                 bigFormWrap.classList.remove("form-wrap_open");
+            },
+
+            setInputValues: function () {
+                var userInfo;
+
+                if (localStorage.getItem("landUserInfo")) {
+                    userInfo = JSON.parse(localStorage.getItem("landUserInfo"));
+                }
+
+                $("[name=name1]").val(userInfo.name);
+                $("[name=phone1]").val(userInfo.phone);
+                $("[name=email1]").val(userInfo.email);
+
+                if (userInfo.city !== "") {
+                    $("[name=city]").val(userInfo.city);
+                }
             }
         };
     }
+
+    function setInputTitle() {
+        var titleVal = document.querySelector("title").innerText;
+        var forms = document.querySelectorAll("form");
+        var inputTitles;
+
+        for (var i = 0; i < forms.length; i++) {
+            var form = forms[i];
+            form.insertBefore(createInputEl(), form.firstElementChild);
+        }
+
+        inputTitles = document.querySelectorAll(".js-hidden-title");
+
+        for (var j = 0; j < inputTitles.length; j++) {
+            var input = inputTitles[j];
+            input.value = titleVal;
+        }
+
+        function createInputEl() {
+            var input = document.createElement("input");
+            input.classList.add("js-hidden-title");
+            input.name = "title";
+            input.type = "hidden";
+
+            return input;
+        }
+    }
+    setInputTitle();
 
     function smallFormHandler(form) {
 
         var selfName = form.find("input[name=name]");
         var selfPhone = form.find("input[name=phone]");
         var selfEmail = form.find("input[name=email]");
+        var selfCity = form.find("input[name=city]");
         var formData = form.serialize();
 
         var landUserInfo = {
             "name": selfName.val(),
             "phone": selfPhone.val(),
-            "email": selfEmail.val()
+            "email": selfEmail.val(),
+            "city": selfCity.val()
         };
 
         localStorage.setItem("landUserInfo", JSON.stringify(landUserInfo));
 
         name = selfName.val();
 
-        if (wlLand === false) {
-
-            $.ajax({
-                type: "POST",
-                url: "php/send.php",
-                data: formData,
-                success: function () {
-                    window.location = thanksLocation;
-                }
-            });
-        } else {
-            window.location = thanksLocation;
-        }
+        $.ajax({
+            type: "POST",
+            url: "php/send.php",
+            data: formData,
+            success: function () {
+                window.location = thanksLocation;
+            }
+        });
 
         if (name) {
             localStorage.setItem("landclientname", name + ", наши");
@@ -207,36 +263,23 @@ $(function () {
     }
 
     function bigFormHandler(form) {
-        var userInfo;
         var formData;
-
-        if (localStorage.getItem("landUserInfo")) {
-            userInfo = JSON.parse(localStorage.getItem("landUserInfo"));
-        }
-
-        $("[name=name1]").val(userInfo.name);
-        $("[name=phone1]").val(userInfo.phone);
-        $("[name=email1]").val(userInfo.email);
-
         formData = form.serialize();
 
-        if (wlLand === false) {
-
-            $.ajax({
-                type: "POST",
-                url: "php/sendpresent.php",
-                data: formData,
-                success: function () {
-                    formAction().closeBigForm();
-                }
-            });
-        }
+        $.ajax({
+            type: "POST",
+            url: "php/sendpresent.php",
+            data: formData,
+            success: function () {
+                formAction().closeBigForm();
+            }
+        });
     }
 
     function thanksPageHandler() {
 
         if (isThanksPage()) {
-            formAction().openBigForm();
+            formAction().openBigForm(formAction().setInputValues);
             $("#thanksName").text(localStorage.getItem("landclientname"));
         }
 

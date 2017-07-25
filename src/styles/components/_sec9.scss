@@ -17,6 +17,13 @@
         @include media(w1024) {
             margin-bottom: 3em;
         }
+
+        @include media(w768) {
+            
+            br {
+                display: none;
+            }
+        }
     }
 
     &__decor {

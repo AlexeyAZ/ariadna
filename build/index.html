@@ -5,7 +5,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>Ариадна</title>
-    <link rel="icon" type="image/png" href="favicon.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="img/favicon.png" sizes="16x16">
     <link rel="stylesheet" href="styles/vendor.css">
     <link rel="stylesheet" href="styles/main.css">
   </head>
@@ -17,9 +17,14 @@
         <p class="form__heading">Оставьте заявку на презентацию франшизы</p>
         <form class="form" id="smallForm" data-next="#bigForm">
           <input class="form__input" type="text" name="name" placeholder="Ваше имя" required="">
-          <input class="form__input" type="text" name="phone" placeholder="Ваш телефон" required="">
+          <input class="form__input input_phone form__input_phone" type="text" name="phone" placeholder="Ваш телефон" required="">
           <input class="form__input" type="email" name="email" placeholder="Ваш email" required="">
-          <button class="btn-round form__btn form__btn_size js-big-btn">Скачать</button>
+          <button class="btn-round form__btn form__btn_size js-big-btn">Скачать</button><br><br>
+          <label class="form__label form__label_security">
+            <input type="checkbox" checked required><span class="form__label-security-text">
+              Нажимая кнопку «Скачать», я даю согласие на обработку персональных данных и соглашаюсь с
+              <a href="doc/politic.pdf" target="_blank">политикой конфиденциальности</a></span>
+          </label>
         </form>
       </div>
     </div>
@@ -31,7 +36,7 @@
         <form class="form" method="POST" id="bigForm">
           <input class="js-hidden-name" type="hidden" name="name1">
           <input class="js-hidden-phone" type="hidden" name="phone1">
-          <input class="js-hidden-phone" type="hidden" name="email1">
+          <input class="js-hidden-mail" type="hidden" name="email1">
           <label class="form__label"><span>Введите Ваш город</span>
             <input class="form__input" type="text" name="city" placeholder="" required="">
           </label>
@@ -66,7 +71,7 @@
           <div class="header__item header__item_descr">
             <p class="s">Франшиза медицинского центра<br> с услугами актуальными для каждого<br> третьего россиянина</p>
           </div>
-          <div class="header__item header__item_contacts"><a class="header__link phone phone_white" href="tel:89375260820" data-phone="89375260820">8 937 526-08-20</a><a class="header__link link link_getcall js-small-btn" href="">Заказать звонок</a></div>
+          <div class="header__item header__item_contacts"><a class="header__link phone phone_white" href="tel:+79128331655" data-phone="+79128331655">+7 912 833-16-55</a><a class="header__link link link_getcall js-small-btn" href="">Заказать звонок</a></div>
         </div>
       </header>
       <div class="container color-white">
@@ -102,7 +107,7 @@
     <section class="sec sec3">
       <div class="container">
         <div class="sec3__content">
-          <p class="m ff-qanelas">
+          <p class="m ff-qanelas mb1">
             В последние несколько лет большую популярность обрели клиники, основанные на
             <span class="bold">безоперабельном методе лечения</span>
           </p>
@@ -112,13 +117,13 @@
     </section>
     <section class="sec sec4">
       <div class="container">
-        <h2 class="ta-center mb0">«Ариадна» — центр восстановительной травматологии и ортопедии,</h2>
-        <p class="l ff-qanelas ta-center sec4__subtitle">в который съезжаются люди из разных городов и стран</p>
+        <h2 class="ta-center mb0">«Ариадна»<br> — центр восстановительной травматологии и ортопедии,</h2>
+        <p class="l ff-qanelas ta-center sec4__subtitle">в который съезжаются<br> люди из разных городов и стран</p>
         <div class="sec4__row">
           <div class="sec4__col sec4__col_img"><img class="sec4__img" src="img/sec4-img.jpg" alt=""><img class="sec4__decor sec4__decor_blue" src="img/decor-plus-blue.png" alt=""><img class="sec4__decor sec4__decor_green" src="img/decor-plus-green.png" alt=""></div>
           <div class="sec4__col sec4__col_border">
             <div class="sec4__border">
-              <p class="mb0 light">Мы помогаем избавляться от артрозов и остеохондрозов, грыж и протрузий дисков, а также мышечной боли с помощью безоперабельных приёмов лечения: миотерапии, остеопатии и висцеральной терапии.</p>
+              <p class="mb0 light m">Мы помогаем избавляться от артрозов и остеохондрозов, грыж и протрузий дисков, а также мышечной боли с помощью безоперабельных приёмов лечения: миотерапии, остеопатии и висцеральной терапии.</p>
             </div>
           </div>
         </div>
@@ -149,7 +154,7 @@
           </div>
           <div class="sec6__col">
             <div class="sec6__border">
-              <p class="m light mb0">За 10 лет мы вылечили более 30 000 человек из России, Казахстана, Германии, Нидерландов, Кипра, Болгарии и Чили. </p>
+              <p class="m light mb0">За 10 лет мы вылечили более 30 000 человек из России, Казахстана, Германии, Нидерландов, Кипра, Болгарии и Чили и многих других. </p>
             </div>
           </div>
         </div>
@@ -158,9 +163,9 @@
     <section class="sec sec7">
       <div class="container">
         <div class="sec7__text">
-          <p class="l semibold ff-qanelas">Годовой оборот нашего центра достиг 40 млн рублей </p>
+          <p class="l semibold ff-qanelas">Годовой оборот нашего центра достиг 61 млн рублей </p>
           <p class="m ff-qanelas mb1">И в 2017–2018 гг. мы планируем открыть по франшизе еще 6 центров</p>
-          <button class="btn-round btn-round_white js-small-btn">Скачать презентацию</button>
+          <button class="btn-round btn-round_white js-small-btn">Узнать подробнее</button>
         </div>
       </div><img class="sec7__map" src="img/sec7-map.png" alt="">
     </section>
@@ -170,7 +175,9 @@
           <div class="sec8__border">
             <h2 class="mb0">
               Станьте владельцем бизнеса, который приносит ощутимую пользу людям и от
-              <span class="bold">590 000 рублей</span>
+              <span class="bold">
+
+                590 000 рублей</span>
               прибыли ежемесячно
             </h2>
           </div>
@@ -214,7 +221,7 @@
       <div class="sec9__bottom"><img class="sec9__img" src="img/sec10-img.jpg" alt="">
         <div class="container sec9__container">
           <div class="sec9__content">
-            <h2 class="bold mb0 sec9__title">Для старта вам потребуется<br> от 950 000 рублей, </h2>
+            <h2 class="bold mb0 sec9__title">Для старта вам потребуется<br> от 950 000 рублей </h2>
             <p class="l medium ff-qanelas sec9__bottom-subtitle">на приобретение франшизы</p>
             <p class="m light sec9__text">А также <span class="medium">598 000 рублей<br></span>
               на инвестиции в помещение,<br class="br-tablet"> оборудование и рекламу
@@ -225,8 +232,7 @@
     </section>
     <section class="sec sec10">
       <div class="container ta-center color-white">
-        <h2 class="semibold mb1">Вы откроетесь через 60 дней,<br> и окупите все вложения уже на 9й месяц работы!</h2>
-        <button class="btn-round btn-round_white js-small-btn sec10__btn">Скачать таблицу затрат и доходов</button>
+        <h2 class="semibold mb1">Вы откроетесь через 60 дней,<br> и окупите все вложения уже на 9й месяц работы!</h2><a class="btn-round btn-round_white sec10__btn" href="doc/fm.xlsx" download>Скачать таблицу затрат и доходов</a>
       </div>
     </section>
     <section class="sec sec11">
@@ -248,7 +254,12 @@
               <label class="bottom-form__label">
                 <input class="input input_email bottom-form__input" type="email" name="email" placeholder="E-mail" required>
               </label>
-              <button class="btn-round bottom-form__btn">Проверить</button>
+              <button class="btn-round bottom-form__btn">Проверить</button><br><br>
+              <label class="form__label form__label_security">
+                <input type="checkbox" checked required><span class="form__label-security-text">
+                  Нажимая кнопку «Скачать», я даю согласие на обработку персональных данных и соглашаюсь с
+                  <a href="doc/politic.pdf" target="_blank">политикой конфиденциальности</a></span>
+              </label>
             </form>
           </div>
         </div>
@@ -275,16 +286,44 @@
           <div class="footer__social">
             <p class="footer__text footer__text_social-title">Мы в социальных сетях</p>
             <ul class="footer__social-list">
-              <li class="footer__social-item"><a class="footer__link footer__link_social" href="" target="_blank"><i class="fa fa-vk"></i></a></li>
-              <li class="footer__social-item"><a class="footer__link footer__link_social" href="" target="_blank"><i class="fa fa-facebook"></i></a></li>
-              <li class="footer__social-item"><a class="footer__link footer__link_social" href="" target="_blank"><i class="fa fa-tripadvisor"></i></a></li>
+              <li class="footer__social-item"><a class="footer__link footer__link_social" href="http://www.ariadna45.ru" target="_blank"><i class="fa fa-globe"></i></a></li>
+              <li class="footer__social-item"><a class="footer__link footer__link_social" href="https://vk.com/centre_ariadna" target="_blank"><i class="fa fa-vk"></i></a></li>
             </ul>
           </div>
         </div>
-        <div class="footer__block footer__block_feedback"><a class="footer__phone" href="tel:89375260820" data-phone="89375260820">8 937 526-08-20</a><a class="footer__link footer__link_getcall js-small-btn">Заказать звонок</a></div>
+        <div class="footer__block footer__block_feedback"><a class="footer__phone" href="tel:+79128331655" data-phone="+79128331655">
+            <!--img(src="img/icon-call-white.png", alt="").footer__phone-icon-->+7 912 833-16-55</a><a class="footer__link footer__link_getcall js-small-btn">Заказать звонок</a></div>
       </div>
     </footer>
     <script src="scripts/vendor.js"></script>
     <script src="scripts/app.js"></script>
+    <!--Yandex.Metrika counter-->
+    <script type="text/javascript">
+      (function (d, w, c) {
+          (w[c] = w[c] || []).push(function() {
+              try {
+                  w.yaCounter45341874 = new Ya.Metrika({
+                      id:45341874,
+                      clickmap:true,
+                      trackLinks:true,
+                      accurateTrackBounce:true,
+                      webvisor:true
+                  });
+              } catch(e) { }
+          });
+      
+          var n = d.getElementsByTagName("script")[0],
+              s = d.createElement("script"),
+              f = function () { n.parentNode.insertBefore(s, n); };
+          s.type = "text/javascript";
+          s.async = true;
+          s.src = "https://mc.yandex.ru/metrika/watch.js";
+      
+          if (w.opera == "[object Opera]") {
+              d.addEventListener("DOMContentLoaded", f, false);
+          } else { f(); }
+      })(document, window, "yandex_metrika_callbacks");
+    </script><noscript><div><img src="https://mc.yandex.ru/watch/45341874" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter-->
   </body>
 </html>

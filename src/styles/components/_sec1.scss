@@ -40,6 +40,7 @@
     &__border {
         border: $border-width-pc solid $main-green;
         border-right: none;
+        pointer-events: none;
         position: absolute;
         top: 0;
         left: -100px;

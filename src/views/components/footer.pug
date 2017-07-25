@@ -22,16 +22,14 @@ footer.footer
                     Мы в социальных сетях
                 ul.footer__social-list
                     li.footer__social-item
-                        a(href="" target="_blank").footer__link.footer__link_social
+                        a(href="http://www.ariadna45.ru" target="_blank").footer__link.footer__link_social
+                            i.fa.fa-globe
+                    li.footer__social-item
+                        a(href="https://vk.com/centre_ariadna" target="_blank").footer__link.footer__link_social
                             i.fa.fa-vk
-                    li.footer__social-item
-                        a(href="" target="_blank").footer__link.footer__link_social
-                            i.fa.fa-facebook
-                    li.footer__social-item
-                        a(href="" target="_blank").footer__link.footer__link_social
-                            i.fa.fa-tripadvisor
         div.footer__block.footer__block_feedback
-            a(href="tel:" + attrPhone)&attributes({'data-phone': attrPhone}).footer__phone.
-                #{phone}
+            a(href="tel:" + attrPhone)&attributes({'data-phone': attrPhone}).footer__phone
+                //img(src="img/icon-call-white.png", alt="").footer__phone-icon
+                |#{phone}
             a().footer__link.footer__link_getcall.js-small-btn.
                 Заказать звонок

@@ -106,9 +106,21 @@ $form-input-padding: 25px;
     &__label {
         font-size: 17px;
 
+        &_security {
+            display: block;
+        }
+
         span {
             display: inline-block;
             margin-bottom: 4px;
+        }
+    }
+
+    &__label-security-text.form__label-security-text {
+        display: inline;
+
+        a {
+            display: inline;
         }
     }
 
@@ -135,6 +147,10 @@ $form-input-padding: 25px;
         padding: 0 $form-input-padding;
         height: $form-input-height;
         width: 100%;
+
+        &_phone {
+            background-image: none, url("../img/galka.svg");
+        }
     }
 
     &__btn {
@@ -151,7 +167,7 @@ $form-input-padding: 25px;
 
             &:after {
                 transform: translateY(-50%);
-                content: "PDF, 13 Mb";
+                content: "PDF, (40 Mb)";
                 color: #a6a6a6;
                 font-family: "PTSans", sans-serif;
                 font-size: 18px;

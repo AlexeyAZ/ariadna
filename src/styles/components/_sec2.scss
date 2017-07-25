@@ -13,11 +13,11 @@
     &__img {
         position: absolute;
         bottom: 0;
-        right: 66%;
+        right: 62%;
         max-height: calc(100% - 80px);
 
         @include media(w1366) {
-            right: 62%;
+            //right: 62%;
         }
 
         @include media(w1024) {
@@ -90,7 +90,7 @@
     }
 
     &__content {
-        padding-left: 33%;
+        padding-left: 38%;
 
         @include media(w1366) {
             padding-left: 40%;

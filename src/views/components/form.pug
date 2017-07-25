@@ -5,10 +5,18 @@ div.form-wrap.form-wrap_small
             Оставьте заявку на презентацию франшизы
         form#smallForm.form(data-next="#bigForm")
             input(type="text" name="name" placeholder="Ваше имя" required="").form__input
-            input(type="text" name="phone" placeholder="Ваш телефон" required="").form__input
+            input(type="text" name="phone" placeholder="Ваш телефон" required="").form__input.input_phone.form__input_phone
             input(type="email" name="email" placeholder="Ваш email" required="").form__input
             button.btn-round.form__btn.form__btn_size.js-big-btn.
                 Скачать
+            <br><br>
+            label.form__label.form__label_security
+                input(type="checkbox" checked required)
+                span.form__label-security-text
+                    |Нажимая кнопку "Скачать", я даю согласие на обработку персональных данных и соглашаюсь с
+                    |
+                    a(href="doc/politic.pdf" target="_blank").
+                        политикой конфиденциальности
 div.form-wrap.form-wrap_big
     div#bigFormContainer.form-container
         div.form__close
@@ -19,7 +27,7 @@ div.form-wrap.form-wrap_big
         form(method="POST")#bigForm.form
             input(type="hidden" name="name1").js-hidden-name
             input(type="hidden" name="phone1").js-hidden-phone
-            input(type="hidden" name="email1").js-hidden-phone
+            input(type="hidden" name="email1").js-hidden-mail
             label.form__label
                 span.
                     Введите Ваш город

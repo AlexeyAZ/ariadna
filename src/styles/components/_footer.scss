@@ -19,7 +19,15 @@
         align-items: flex-start;
 
         @include media(w1024) {
-            flex-wrap: wrap;
+            flex-flow: column;
+            align-items: center;
+        }
+
+        br {
+
+            @include media(w1024) {
+                display: none;
+            }
         }
     }
 
@@ -30,12 +38,8 @@
             flex-direction: column;
             
             @include media(w1024) {
-                flex-direction: row;
-                justify-content: space-between;
+                justify-content: center;
                 align-items: center;
-                order: 3;
-                margin-top: 30px;
-                width: 100%;
             }
 
             @include media(w768) {
@@ -48,12 +52,12 @@
             flex-direction: column;
 
             @include media(w1024) {
-                order: 1;
+                //order: 1;
             }
 
             @include media(w768) {
                 align-items: center;
-                order: 2;
+                //order: 2;
             }
         }
 
@@ -62,18 +66,18 @@
             align-items: flex-end;
 
             @include media(w1024) {
-                order: 2;
+                flex-flow: column;
+                align-items: center;
             }
 
             @include media(w768) {
                 align-items: center;
-                order: 1;
+                //order: 1;
             }
         }
 
-        @include media(w768) {
+        @include media(w1024) {
             margin-bottom: 10px;
-            width: 100%;
         }
     }
 
@@ -104,8 +108,12 @@
 
     &__social {
         display: flex;
-        align-items: center;
+        flex-flow: column;
         white-space: nowrap;
+
+        @include media(w1024) {
+            align-items: center;
+        }
     }
 
     &__social-list {
@@ -113,15 +121,15 @@
     }
 
     &__social-item {
-        background-color: #9a9a9a;
+        //background-color: #9a9a9a;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 14px;
-        margin-right: 4px;
-        height: 24px;
-        width: 24px;
+        font-size: 20px;
+        margin-right: 8px;
+        // height: 24px;
+        // width: 24px;
     }
     
     &__link {
@@ -133,16 +141,16 @@
 
         &:hover {
             border-color: currentColor;
+            color: white;
         }
 
         &_social {
             border: none;
-            color: white;
+            //color: white;
         }
 
         &_politic {
             border-bottom: 1px solid currentColor;
-            margin-left: 30px;
 
             @include media(w1024) {
                 margin-left: 10px;
@@ -155,7 +163,7 @@
 
         &_getcall {
             border-bottom: 1px dotted currentColor;
-            font-size: 18px;
+            //font-size: 18px;
         }
     }
 
@@ -178,5 +186,24 @@
         color: $footer-text;
         line-height: 1;
         text-decoration: none;
+        //margin-right: 30px;
+
+        &:hover {
+            color: white;
+
+            .footer__phone-icon {
+                opacity: 1;
+            }
+        }
+
+        @include media(w1024) {
+            margin-right: 0;
+        }
+    }
+
+    &__phone-icon {
+        transition: $trans;
+        opacity: 0.5;
+        margin-right: 4px;
     }
 }

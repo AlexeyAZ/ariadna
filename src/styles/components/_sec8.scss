@@ -46,13 +46,14 @@ $sec8-list-circle-size: 70px;
     &__border {
         border: $border-width-pc solid $main-green;
         margin-left: -130px;
-        margin-right: -60px;
+        margin-right: -80px;
         margin-bottom: 2em;
         padding: 40px 60px 40px 130px;
         position: relative;
         z-index: 1;
 
         @include media(w1366) {
+            margin-right: -60px;
             padding: 40px 30px 40px 130px;
         }
 
